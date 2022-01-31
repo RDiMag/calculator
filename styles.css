@@ -1,0 +1,30 @@
+body {
+    font-size: larger;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+.grid-container {
+    display: grid;
+    max-width: 500px;
+    max-height: 500px;
+    border-style: solid;
+    border-color: darkslategrey;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 100px);
+    grid-row-gap: 3px;
+    grid-column-gap: 3px;
+    margin: auto;
+    padding: 10px;
+    position: relative;
+}
+
+.grid-container > div {
+    background-color: rgb(161, 226, 205);
+    border-style: solid;
+    border-width: 2px;
+    border-color: darkslategrey;
+    display: flex;
+    align-items: center;    
+    justify-content: center;
+}
