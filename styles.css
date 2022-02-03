@@ -1,42 +1,63 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 body {
     font-size: larger;
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
+    padding: 0;
+    margin: 0;
+    background-image: linear-gradient(gray, rgba(49, 49, 109));
 }
 
 .grid-container {
     display: grid;
-    max-width: 500px;
-    max-height: 500px;
-    border-style: solid;
-    border-color: darkslategrey;
-    grid-template-columns: repeat(3, .25fr);
-    grid-template-rows: repeat(4, .25fr);
-    grid-row-gap: 3px;
-    grid-column-gap: 3px;
-    margin: auto;
-    padding: 10px;
-    position: relative;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(100px, auto) repeat(5, 100px);
     
 }
 
 .grid-container > button {
-    background-color: rgb(161, 226, 205);
+    cursor: pointer;
+    font-size: 2rem;
+    background-color: rgb(161, 226, 205, .75);
     border-style: solid;
-    border-width: 2px;
+    border-width: 1px;
     border-color: darkslategrey;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;    
-    justify-content: center;
+    border-radius: 8px;
 }
 
+
+.span-two {
+    grid-column: span 3;
+  }
+
 .display {
-    grid-column-start: 1;
-    grid-column-end: end;
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 8px;
+    border-radius: 8px;
     border-style: solid;
     border-color: darkslategrey;
     border-width: 2px;
-    background-color: rgb(206, 233, 224);
+    background-color: rgb(230, 243, 239);
+    word-wrap: break-word;
+    word-break: break-all;
 } 
 
+.display .previous-value {
+    color: black, .75;
+    font-size: 1.5rem;
+}
+
+.display .current-value {
+    color: black;
+    font-size: 2.5rem;
+}
