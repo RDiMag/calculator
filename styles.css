@@ -24,7 +24,7 @@ body {
 .grid-container > button {
     cursor: pointer;
     font-size: 2rem;
-    background-color: rgb(161, 226, 205, .75);
+    background-color: rgba(238, 220, 253, 0.75);
     border-style: solid;
     border-width: 1px;
     border-color: darkslategrey;
